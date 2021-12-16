@@ -69,19 +69,19 @@ sollen diejenigen Gruppenmitglieder, die nicht an (1.) gearbeitet haben, den
 Datensatz analysieren (Deskription und Visualisierung). Hierzu sollen nun Funktionen
 erstellt werden, die dabei genutzt werden.
 - Funktionen-R-Skript 1 soll (mindestens) folgende Funktionen enthalten:
-    a. Eine Funktion, die verschiedene geeignete deskriptive Statistiken
+    1. Eine Funktion, die verschiedene geeignete deskriptive Statistiken
 für metrische Variablen berechnet und ausgibt
-    b. Eine Funktion, die verschiedene geeignete deskriptive Statistiken
+    2. Eine Funktion, die verschiedene geeignete deskriptive Statistiken
 für kategoriale Variablen berechnet und ausgibt
-    c. Eine Funktion, die geeignete deskriptive bivariate Statistiken für
+    3. Eine Funktion, die geeignete deskriptive bivariate Statistiken für
 den Zusammenhang zwischen zwei kategorialen Variablen
 berechnet ausgibt
-    d. Eine Funktion, die geeignete deskriptive bivariate Statistiken für
+    4. Eine Funktion, die geeignete deskriptive bivariate Statistiken für
 den Zusammengang zwischen einer metrischen und einer
 dichotomen Variablen berechnet und ausgibt
-    e. Eine Funktion, die eine mindestens ordinal skalierte Variable
+    5. Eine Funktion, die eine mindestens ordinal skalierte Variable
 quantilbasiert kategorisiert (z.B. in „niedrig“, „mittel“, „hoch“)
-    f. Eine Funktion, die eine geeignete Visualisierung von drei oder vier
+    6. Eine Funktion, die eine geeignete Visualisierung von drei oder vier
 kategorialen Variablen erstellt
     Freiwillig: weitere zur Deskription und Visualisierung geeignete
 Funktionen
