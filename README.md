@@ -68,30 +68,30 @@ Aufgabe (4.) nicht erledigt ist.
 sollen diejenigen Gruppenmitglieder, die nicht an (1.) gearbeitet haben, den
 Datensatz analysieren (Deskription und Visualisierung). Hierzu sollen nun Funktionen
 erstellt werden, die dabei genutzt werden.
-- Funktionen-R-Skript 1 soll (mindestens) folgende Funktionen enthalten:
-    1. Eine Funktion, die verschiedene geeignete deskriptive Statistiken
+    - Funktionen-R-Skript 1 soll (mindestens) folgende Funktionen enthalten:
+        1. Eine Funktion, die verschiedene geeignete deskriptive Statistiken
 für metrische Variablen berechnet und ausgibt
-    2. Eine Funktion, die verschiedene geeignete deskriptive Statistiken
+        2. Eine Funktion, die verschiedene geeignete deskriptive Statistiken
 für kategoriale Variablen berechnet und ausgibt
-    3. Eine Funktion, die geeignete deskriptive bivariate Statistiken für
+        3. Eine Funktion, die geeignete deskriptive bivariate Statistiken für
 den Zusammenhang zwischen zwei kategorialen Variablen
 berechnet ausgibt
-    4. Eine Funktion, die geeignete deskriptive bivariate Statistiken für
+        4. Eine Funktion, die geeignete deskriptive bivariate Statistiken für
 den Zusammengang zwischen einer metrischen und einer
 dichotomen Variablen berechnet und ausgibt
-    5. Eine Funktion, die eine mindestens ordinal skalierte Variable
+        5. Eine Funktion, die eine mindestens ordinal skalierte Variable
 quantilbasiert kategorisiert (z.B. in „niedrig“, „mittel“, „hoch“)
-    6. Eine Funktion, die eine geeignete Visualisierung von drei oder vier
+        6. Eine Funktion, die eine geeignete Visualisierung von drei oder vier
 kategorialen Variablen erstellt
-    Freiwillig: weitere zur Deskription und Visualisierung geeignete
+        7. Freiwillig: weitere zur Deskription und Visualisierung geeignete
 Funktionen
 
-• Funkionen-R-Skript 2 soll Helfer-Funktionen enthalten, die nicht selbst zur
+    - Funkionen-R-Skript 2 soll Helfer-Funktionen enthalten, die nicht selbst zur
 Deskription und Visualisierung der Daten verwendet werden, sondern die nur
 in Funktionen-Skript 1 Anwendung finden (-> interne Funktionen).
 Funktionen-R-Skript 2 muss mindestens eine Funktion enthalten.
 
-• Denken Sie auch an eine gute Dokumentation aller Funktionen. Nutzen Sie Ihr
+    -  Denken Sie auch an eine gute Dokumentation aller Funktionen. Nutzen Sie Ihr
 GitHub Repository um darüber zu diskutieren, welche Funktionen sinnvoll und
 notwendig sind.
 
