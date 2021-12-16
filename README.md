@@ -88,7 +88,7 @@ Funktionen
 
 • Funkionen-R-Skript 2 soll Helfer-Funktionen enthalten, die nicht selbst zur
 Deskription und Visualisierung der Daten verwendet werden, sondern die nur
-in Funktionen-Skript 1 Anwendung finden ( interne Funktionen).
+in Funktionen-Skript 1 Anwendung finden (-> interne Funktionen).
 Funktionen-R-Skript 2 muss mindestens eine Funktion enthalten.
 
 • Denken Sie auch an eine gute Dokumentation aller Funktionen. Nutzen Sie Ihr
