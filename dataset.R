@@ -30,11 +30,22 @@ dataset_gen = function(seed){
   # Platzhalter, werte werden erstmal nur gleichverteilt gezogen
   interesse_mathe = sample(1:7, 100, replace = TRUE)
   
-  # Platzhalter, werte werden erstmal nur gleichverteilt gezogen
-  interesse_programmieren = sample(1:7, 100, replace = TRUE)
+  # Platzhalter
+  interesse_programmieren = vector()
+  for(i in 1:100){
+    if(fach[i] == "Data Science" || fach[i] == "Informatik"){
+      interesse_programmieren[i] = sample(1:7, 1, prob = c(0.1, 0.1, 0.1, 0.15, 0.2 , 0.2, 0.15))
+    }
+    else{
+      interesse_programmieren[i] = sample(1:7, 1, replace = TRUE)
+    }
+  }
   
-  # Platzhalter, werte werden erstmal nur gleichverteilt gezogen
-  mathe_LK = sample(c(0,1), 100, replace = TRUE)
+  # Platzhalter
+  mathe_LK = vector()
+  for(i in 1:100){
+    mathe_LK[i] = sample(c(0,1), 1, prob = c(0.8-interesse_mathe[i]/10, 0.2 + interesse_mathe[i]/10))
+  }
   
   
   
@@ -46,5 +57,5 @@ dataset_gen = function(seed){
   write.csv(df, "dataset.csv")
 }
 
-setwd("C:/Users/Daniel/Documents/GitHub/Gruppenarbeit_wiss_arbeiten")
+setwd("C:/Users/jonam/Documents/GitHub/Gruppenarbeit_wiss_arbeiten")
 dataset_gen(123)
