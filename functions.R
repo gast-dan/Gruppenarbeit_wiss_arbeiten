@@ -41,6 +41,8 @@ function_d = function(){
 #Eingabe:
 #   data - ordinal sklaierter Vektor, in numerisch umwandelbar, quantiles - aeussere Quantilsgrenzen, Abgrenzung von
 #          "niedrig" zu "mittel" und "mittel" zu "hoch".
+#Ausgabe:
+#   Vektor mit Eingabedimension, jeweils durch Kategorie ersetzt.
 ordinal_kategorie = function(data, quantiles=0.25){
   data = as.numeric(data)
   q = quantile(data, probs = seq(0, 1, quantiles))
