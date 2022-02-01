@@ -49,7 +49,6 @@ ordinal_kategorie = function(data, quantiles=0.25){
   new_data = c()
   new_data[data <= q[[2]]] = "niedrig"
   new_data[data >= q[[length(q)-2]]] = "hoch"
-  print(new_data)
   new_data[is.na(new_data)] = "mittel"
   return(new_data)
 }
