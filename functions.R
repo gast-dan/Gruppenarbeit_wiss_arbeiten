@@ -1,3 +1,4 @@
+library("modeest")
 
 # Eine Funktion, die verschiedene geeignete deskriptive Statistiken für metrische Variablen berechnet und ausgibt
 # Name ist Platzhalter!
@@ -15,7 +16,8 @@ function_a = function(){
 function_b = function(x){
   absH <- table(x)
   relH <- table(x)/length(x)
-  return(list(absH, relH))
+  mode <- mfv(x)
+  return(list(absH, relH, mode))
 }
 
 #Test
