@@ -45,6 +45,7 @@ function_d = function(){
 #   Vektor mit Eingabedimension, jeweils durch Kategorie ersetzt.
 ordinal_kategorie = function(data, quantiles=0.25){
   data = as.numeric(data)
+  stopifnot(!any(is.na(data)))
   q = quantile(data, probs = seq(0, 1, quantiles))
   new_data = c()
   new_data[data <= q[[2]]] = "niedrig"
