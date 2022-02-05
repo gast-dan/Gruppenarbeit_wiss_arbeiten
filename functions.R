@@ -21,12 +21,32 @@ function_b = function(){
 
 #Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammenhang zwischen zwei kategorialen Variablen berechnet ausgibt
 # Name ist Platzhalter!
-function_c = function(){
 
 
-
+# Berechnet fuer zwei numerische Vektoren gleicher Laenge die Kovarianz
+# und die Korrelationen nach Pearson (lineare korrelation) bzw.
+# Spearman (monoton, aber nicht notwendigerweise linear)
+function_c = function(vector1, vector2){
+  
+  stopifnot(is.numeric(vector1),
+            is.numeric(vector2),
+            length(vector1) == length(vector2))
+  
+  
+  covariance = cov(vector1, vector2)
+  pearson = cor(vector1, vector2, method = "pearson")
+  spearman = cor(vector1, vector2, method = "spearman")
+  
+  
+  return(list("Kovarianz" = covariance,
+              "Pearson-Korrelation" = pearson,
+              "Spearman-Korrelation" =  spearman)
+         )
+  
+  
 
 }
+
 
 #Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammengang zwischen einer metrischen und einer dichotomen Variablen berechnet und ausgibt
 # Name ist Platzhalter!
