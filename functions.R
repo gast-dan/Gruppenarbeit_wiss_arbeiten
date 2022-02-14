@@ -48,14 +48,33 @@ function_c = function(vector1, vector2){
 }
 
 
-#Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammengang zwischen einer metrischen und einer dichotomen Variablen berechnet und ausgibt
-# Name ist Platzhalter!
-function_d = function(){
 
+# Beziehung zwischen einer binären Variablen x und einer kontinuierlichen Variablen y.
+# 
+# nimmt einen Wert zwischen -1 und 1 an, wobei:
+#   
+# -1 zeigt eine vollkommen negative Korrelation zwischen zwei Variablen an
+# 0 zeigt keine Korrelation zwischen zwei Variablen an
+# 1 zeigt eine vollkommen positive Korrelation zwischen zwei Variablen an
 
+# https://statologie.de/punktbiseriale-korrelation-r/
 
+binaer_stetig_corr = function(binary_vector, stetig_vektor){
+  
+  stopifnot(is.numeric(binary_vector),
+            is.vector(binary_vector),
+            is.numeric(stetig_vektor),
+            is.vector(stetig_vektor),
+            length(stetig_vektor) == length(binary_vector),
+            unique(binary_vector) == c(0,1) | unique(binary_vector) == c(1,0)
+            )
+
+  
+  return(cor.test(binary_vector, stetig_vektor)$estimate)
 
 }
+
+
 
 #ordinal_kategorie - kategorisiert eine ordinal skalierte Variable quantilbasiert in "niedrig", "mittel", "hoch"
 #Eingabe:
