@@ -11,9 +11,12 @@ function_a = function(){
 
 
 
-#Eine Funktion, die verschiedene geeignete deskriptive Statistiken für kategoriale Variablen berechnet und ausgibt
-# Name ist Platzhalter!
-function_b = function(x){
+#kategorial_stat - berechnet geeignete deskriptive Statistiken f�r kategoriale Variablen
+#Eingabe:
+#   x - Vektor: kategoriale Variable
+#Ausgabe:
+#   Liste mit 3 Elementen: absolute Haeufigkeit, relative Haeufigkeit, Modalwert
+kategorial_stat = function(x){
   absH <- table(x)
   relH <- table(x)/length(x)
   mode <- mfv(x)
@@ -21,7 +24,7 @@ function_b = function(x){
 }
 
 #Test
-function_b(c("M", "M", "F", "M", "M", "M", "F", "F", "F", "M"))
+kategorial_stat(c("M", "M", "F", "M", "M", "M", "F", "F", "F", "M"))
 
 #Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammenhang zwischen zwei kategorialen Variablen berechnet ausgibt
 # Name ist Platzhalter!
