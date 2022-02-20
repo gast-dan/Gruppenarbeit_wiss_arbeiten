@@ -1,14 +1,16 @@
 library("modeest")
 
-# Eine Funktion, die verschiedene geeignete deskriptive Statistiken für metrische Variablen berechnet und ausgibt
-# Name ist Platzhalter!
-function_a = function(){
-
-
-
-
+#metrisch_stat - berechnet geeignete deskriptive Statistiken fuer metrische Variablen
+#Eingabe:
+#   x - Vektor: metrische Variable
+#Ausgabe:
+#   Liste mit 3 Elementen: Mittelwert, Varianz, Standardabweichung
+metrisch_stat = function(x){
+  mittelwert <- mean(x)
+  varianz <- var(x)
+  sAbweichung <- sd(x)
+  return(list(mittelwert,varianz,sAbweichung))
 }
-
 
 
 
