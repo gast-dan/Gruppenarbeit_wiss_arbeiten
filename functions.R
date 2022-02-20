@@ -1,4 +1,4 @@
-
+source("helper.R")
 # Eine Funktion, die verschiedene geeignete deskriptive Statistiken für metrische Variablen berechnet und ausgibt
 # Name ist Platzhalter!
 function_a = function(){
@@ -86,12 +86,10 @@ ordinal_kategorie = function(data, quantiles=0.25){
   data = as.numeric(data)
   stopifnot(!any(is.na(data)))
   q = quantile(data, probs = seq(0, 1, quantiles))
-  new_data = c()
-  new_data[data <= q[[2]]] = "niedrig"
-  new_data[data >= q[[length(q)-2]]] = "hoch"
-  new_data[is.na(new_data)] = "mittel"
-  return(new_data)
+  
+  return(categories(data, q))
 }
+
 
 
 #Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt
