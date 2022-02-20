@@ -4,12 +4,17 @@ library("modeest")
 #Eingabe:
 #   x - Vektor: metrische Variable
 #Ausgabe:
-#   Liste mit 3 Elementen: Mittelwert, Varianz, Standardabweichung
+#  statistiken- Liste mit 7 Elementen: Mittelwert, Varianz, Standardabweichung, Modalwert, Median, Minimum, Maximum
 metrisch_stat = function(x){
   mittelwert <- mean(x)
   varianz <- var(x)
   sAbweichung <- sd(x)
-  return(list(mittelwert,varianz,sAbweichung))
+  modalwert <- mfv(x)
+  median <- median(x)
+  minimum <- min(x)
+  maximum <- max(x)
+  statistiken <- list(mittelwert,varianz,sAbweichung,modalwert,median,minimum,maximum)
+  return(statistiken)
 }
 
 
