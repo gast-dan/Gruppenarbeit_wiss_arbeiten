@@ -112,7 +112,7 @@ ggpairs(kategorial)
  }
 #Test:
 daten <- data.frame(Geschlecht <- c("M","F","M"), Alter <- c(1,2,3), Name<- c("A","B","C"))
-function_f(daten)
+Visual(daten)
 
 
 
