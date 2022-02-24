@@ -1,10 +1,22 @@
-
 source("helper.R")
 library("modeest")
 
-
-
-
+#metrisch_stat - berechnet geeignete deskriptive Statistiken fuer metrische Variablen
+#Eingabe:
+#   x - Vektor: metrische Variable
+#Ausgabe:
+#  statistiken- Liste mit 7 Elementen: Mittelwert, Varianz, Standardabweichung, Modalwert, Median, Minimum, Maximum
+metrisch_stat = function(x){
+  mittelwert <- mean(x)
+  varianz <- var(x)
+  sAbweichung <- sd(x)
+  modalwert <- mfv(x)
+  median <- median(x)
+  minimum <- min(x)
+  maximum <- max(x)
+  statistiken <- list(mittelwert,varianz,sAbweichung,modalwert,median,minimum,maximum)
+  return(statistiken)
+}
 
 
 
