@@ -3,9 +3,6 @@ source("helper.R")
 library("modeest")
 
 
-# Eine Funktion, die verschiedene geeignete deskriptive Statistiken für metrische Variablen berechnet und ausgibt
-# Name ist Platzhalter!
-function_a = function(){
 
 
 
