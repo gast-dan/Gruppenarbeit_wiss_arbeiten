@@ -104,12 +104,14 @@ ordinal_kategorie = function(data, quantiles=0.25){
 
 #Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt
 # Name ist Platzhalter!
-function_f = function(){
+library(GGally)
+function_f = function(x){ 
+ggpairs(x)
+ }
+#Test:
+daten <- data.frame(Geschlecht <- c("M","F","M"), Alter <- c(1,2,3), Name<- c("A","B","C"))
+function_f(daten)
 
-
-
-
-}
 
 
 
