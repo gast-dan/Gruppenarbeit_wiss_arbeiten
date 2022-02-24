@@ -7,9 +7,6 @@ library("modeest")
 
 
 
-}
-
-
 
 
 #kategorial_stat - berechnet geeignete deskriptive Statistiken f�r kategoriale Variablen
