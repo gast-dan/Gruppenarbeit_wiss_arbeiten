@@ -121,17 +121,6 @@ ggpairs(kategorial)
 #daten <- data.frame(Geschlecht <- c("M","F","M"), Alter <- c(1,2,3), Name<- c("A","B","C"))
 #Visual(daten)
 
-=======
-
-#Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt
-# Name ist Platzhalter!
-function_f = function(){
-
-
-
-
-}
-
 
 
 
