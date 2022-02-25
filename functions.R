@@ -1,15 +1,23 @@
+source("helper.R")
 library("modeest")
 library(GGally)
 
-# Eine Funktion, die verschiedene geeignete deskriptive Statistiken für metrische Variablen berechnet und ausgibt
-# Name ist Platzhalter!
-function_a = function(){
-
-
-
-
+#metrisch_stat - berechnet geeignete deskriptive Statistiken fuer metrische Variablen
+#Eingabe:
+#   x - Vektor: metrische Variable
+#Ausgabe:
+#  statistiken- Liste mit 7 Elementen: Mittelwert, Varianz, Standardabweichung, Modalwert, Median, Minimum, Maximum
+metrisch_stat = function(x){
+  mittelwert <- mean(x)
+  varianz <- var(x)
+  sAbweichung <- sd(x)
+  modalwert <- mfv(x)
+  median <- median(x)
+  minimum <- min(x)
+  maximum <- max(x)
+  statistiken <- list(mittelwert,varianz,sAbweichung,modalwert,median,minimum,maximum)
+  return(statistiken)
 }
-
 
 
 
@@ -95,11 +103,8 @@ ordinal_kategorie = function(data, quantiles=0.25){
   data = as.numeric(data)
   stopifnot(!any(is.na(data)))
   q = quantile(data, probs = seq(0, 1, quantiles))
-  new_data = c()
-  new_data[data <= q[[2]]] = "niedrig"
-  new_data[data >= q[[length(q)-2]]] = "hoch"
-  new_data[is.na(new_data)] = "mittel"
-  return(new_data)
+  
+  return(categories(data, q))
 }
 
 #visual - erstellt eine geeignete Visualisierung von drei kategorialen Variablen
@@ -115,6 +120,17 @@ ggpairs(kategorial)
 #Test:
 #daten <- data.frame(Geschlecht <- c("M","F","M"), Alter <- c(1,2,3), Name<- c("A","B","C"))
 #Visual(daten)
+
+=======
+
+#Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt
+# Name ist Platzhalter!
+function_f = function(){
+
+
+
+
+}
 
 
 
