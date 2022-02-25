@@ -1,5 +1,6 @@
 source("helper.R")
 library("modeest")
+library(GGally)
 
 #metrisch_stat - berechnet geeignete deskriptive Statistiken fuer metrische Variablen
 #Eingabe:
@@ -106,16 +107,20 @@ ordinal_kategorie = function(data, quantiles=0.25){
   return(categories(data, q))
 }
 
+#visual - erstellt eine geeignete Visualisierung von drei kategorialen Variablen
+#Eingabe:
+#   kat_vektor1, kat_vektor2, kat_vektor3- die kategoriellen Variablen i
+#Ausgabe:
+#  die Visualisierung
+Visual = function(kat_vektor1,kat_vektor2,kat_vektor3){ 
+kategorial <- data.frame(kat_vektor1,kat_vektor2,kat_vektor3)
+#Ich habe die hier noch einmal zusammengefasst, da in ggpairs ein dataframe eingesetzt werden soll, der nur aus kategorialen Variablen besteht.
+ggpairs(kategorial)
+ }
+#Test:
+#daten <- data.frame(Geschlecht <- c("M","F","M"), Alter <- c(1,2,3), Name<- c("A","B","C"))
+#Visual(daten)
 
-
-#Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt
-# Name ist Platzhalter!
-function_f = function(){
-
-
-
-
-}
 
 
 
