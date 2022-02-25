@@ -1,4 +1,5 @@
 library("modeest")
+library(GGally)
 
 # Eine Funktion, die verschiedene geeignete deskriptive Statistiken für metrische Variablen berechnet und ausgibt
 # Name ist Platzhalter!
@@ -101,10 +102,11 @@ ordinal_kategorie = function(data, quantiles=0.25){
   return(new_data)
 }
 
-
-#Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt
-# Name ist Platzhalter!
-library(GGally)
+#visual - erstellt eine geeignete Visualisierung von drei kategorialen Variablen
+#Eingabe:
+#   kat_vektor1, kat_vektor2, kat_vektor3- die kategoriellen Variablen i
+#Ausgabe:
+#  die Visualisierung
 Visual = function(kat_vektor1,kat_vektor2,kat_vektor3){ 
 kategorial <- data.frame(kat_vektor1,kat_vektor2,kat_vektor3)
 #Ich habe die hier noch einmal zusammengefasst, da in ggpairs ein dataframe eingesetzt werden soll, der nur aus kategorialen Variablen besteht.
