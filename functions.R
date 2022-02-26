@@ -7,6 +7,7 @@ library(GGally)
 #   x - Vektor: metrische Variable
 #Ausgabe:
 #  statistiken- Liste mit 7 Elementen: Mittelwert, Varianz, Standardabweichung, Modalwert, Median, Minimum, Maximum
+
 metrisch_stat = function(x){
   mittelwert <- mean(x)
   varianz <- var(x)
@@ -15,7 +16,7 @@ metrisch_stat = function(x){
   median <- median(x)
   minimum <- min(x)
   maximum <- max(x)
-  statistiken <- list(mittelwert,varianz,sAbweichung,modalwert,median,minimum,maximum)
+  statistiken <- list("mittelwert"=mittelwert,"varianz"=varianz,"standardabweichung"=sAbweichung,"modalwert"=modalwert,"median"=median,"minimum"=minimum,"maximum"=maximum)
   return(statistiken)
 }
 
@@ -26,6 +27,7 @@ metrisch_stat = function(x){
 #   x - Vektor: kategoriale Variable
 #Ausgabe:
 #   Liste mit 3 Elementen: absolute Haeufigkeit, relative Haeufigkeit, Modalwert
+
 kategorial_stat = function(x){
   absH <- table(x)
   relH <- table(x)/length(x)
@@ -36,14 +38,16 @@ kategorial_stat = function(x){
 #Test
 kategorial_stat(c("M", "M", "F", "M", "M", "M", "F", "F", "F", "M"))
 
-#Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammenhang zwischen zwei kategorialen Variablen berechnet ausgibt
-# Name ist Platzhalter!
-
-
-# Berechnet fuer zwei numerische Vektoren gleicher Laenge die Kovarianz
+#kat_bivariat -Berechnet fuer zwei numerische Vektoren gleicher Laenge die Kovarianz
 # und die Korrelationen nach Pearson (lineare korrelation) bzw.
 # Spearman (monoton, aber nicht notwendigerweise linear)
-function_c = function(vector1, vector2){
+#Eingabe:
+#   vector1 - numerischer Vektor: kategoriale Variable
+#   vector2-  numerischer Vektor: kategoriale Variable
+#Ausgabe:
+#   Liste mit 3 Elementen: Kovarianz, Pearson-Korrelation, Spearman-Korrelation
+
+kat_bivariat = function(vector1, vector2){
   
   stopifnot(is.numeric(vector1),
             is.numeric(vector2),
@@ -59,14 +63,11 @@ function_c = function(vector1, vector2){
               "Pearson-Korrelation" = pearson,
               "Spearman-Korrelation" =  spearman)
          )
-  
-  
-
 }
 
 
 
-# Beziehung zwischen einer binären Variablen x und einer kontinuierlichen Variablen y.
+# binaer_stetig_corr- Beziehung zwischen einer binären Variablen x und einer kontinuierlichen Variablen y.
 # 
 # nimmt einen Wert zwischen -1 und 1 an, wobei:
 #   
@@ -92,13 +93,13 @@ binaer_stetig_corr = function(binary_vector, stetig_vektor){
 }
 
 
-
 #ordinal_kategorie - kategorisiert eine ordinal skalierte Variable quantilbasiert in "niedrig", "mittel", "hoch"
 #Eingabe:
 #   data - ordinal sklaierter Vektor, in numerisch umwandelbar, quantiles - aeussere Quantilsgrenzen, Abgrenzung von
 #          "niedrig" zu "mittel" und "mittel" zu "hoch".
 #Ausgabe:
 #   Vektor mit Eingabedimension, jeweils durch Kategorie ersetzt.
+
 ordinal_kategorie = function(data, quantiles=0.25){
   data = as.numeric(data)
   stopifnot(!any(is.na(data)))
@@ -112,23 +113,14 @@ ordinal_kategorie = function(data, quantiles=0.25){
 #   kat_vektor1, kat_vektor2, kat_vektor3- die kategoriellen Variablen i
 #Ausgabe:
 #  die Visualisierung
+
 Visual = function(kat_vektor1,kat_vektor2,kat_vektor3){ 
 kategorial <- data.frame(kat_vektor1,kat_vektor2,kat_vektor3)
-#Ich habe die hier noch einmal zusammengefasst, da in ggpairs ein dataframe eingesetzt werden soll, der nur aus kategorialen Variablen besteht.
 ggpairs(kategorial)
  }
+
 #Test:
 #daten <- data.frame(Geschlecht <- c("M","F","M"), Alter <- c(1,2,3), Name<- c("A","B","C"))
 #Visual(daten)
 
 
-
-
-#Freiwillig: weitere zur Deskription und Visualisierung geeignete Funktionen
-# Name ist Platzhalter!
-function_g = function(){
-
-
-
-
-}
