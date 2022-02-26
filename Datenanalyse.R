@@ -16,11 +16,11 @@ kategorial_stat(dataset$Interesse_an_Mathematik)
 #deskriptive bivariate Statistiken
 #fuer den Zusammenhang zwischen zwei kategorialen Variablen
 
-function_c(dataset$Interesse_an_Mathematik,dataset$Mathe_LK)
+kat_bivariat(dataset$Interesse_an_Mathematik,dataset$Mathe_LK)
 #Kovarianz: 0.3583838, Pearson-Korrelation: 0.3383459, Spearman-Korrelation: 0.3449616
 
 
-function_c(dataset$Interesse_an_Programmieren, dataset$Interesse_an_Mathematik)
+kat_bivariat(dataset$Interesse_an_Programmieren, dataset$Interesse_an_Mathematik)
 #Kovarianz: -0.3349495, Pearson-Korrelation: -0.08283833, -0.0760725
 
 
