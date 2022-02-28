@@ -1,4 +1,6 @@
 #Datenanalyse
+source("functions.R")
+
 #a)
 #deskriptive Statistiken fuer metrische Variablen
 
@@ -35,7 +37,9 @@ binaer_stetig_corr(dataset$Mathe_LK, dataset$Alter)
 #mindestens ordinal skalierte Variable
 #quantilbasiert kategorisiert
 ordinal_kategorie(dataset$Interesse_an_Programmieren)
+table(ordinal_kategorie(dataset$Interesse_an_Programmieren)) #hoch 27  mittel 44  niedrig 29
 ordinal_kategorie(dataset$Interesse_an_Mathematik)
+table(ordinal_kategorie(dataset$Interesse_an_Mathematik)) #hoch 45  mittel 18  niedrig 37
 
 
 #f)
